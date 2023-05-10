@@ -81,20 +81,21 @@ export default function Quiz_page() {
   return (
     <>
    { resultpage ?(<ResultPage marks={marks}/>):
-         <div>
-          <h1>APP</h1>
+         <div className='main-div'>
+          <div className='sub-div'>
+          <h2>QUIZ APP</h2>
           <h2>{question}</h2>
-           <div>
-           <input  value={answer} onChange={handleanswerchange} placeholder="Answer"/>
-           </div>
-          <div>
-            <button
+         
+           <input className='user-input'  value={answer} onChange={handleanswerchange} placeholder="Answer"/>
+          
+          
+            <button className='btn'
               onClick={onClickNext}
            >
               {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
               
             </button>
-          </div>
+            </div>
         </div>
        } 
         </>
